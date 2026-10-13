@@ -1,0 +1,51 @@
+# Python environments, build output, and caches.
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Local workspace configuration and credentials.
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+.DS_Store
+
+# Data and generated results are local. Keep directory instructions in Git.
+/data/**
+!/data/**/
+!/data/**/README.md
+!/data/**/.gitkeep
+/outputs/**
+!/outputs/README.md
+!/outputs/.gitkeep
+
+# Large scan/cube/export formats, even if placed outside data/.
+*.[eE][iI][fF][fF]
+*.[eE][iI][fF]
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.[bB][iI][lL]
+*.[bB][iI][pP]
+*.[bB][sS][qQ]
+*.[rR][aA][wW]
+*.[dD][aA][tT]
+*.[bB][iI][nN]
+*.[nN][pP][yY]
+*.[nN][pP][zZ]
+*.[mM][aA][tT]
+*.[hH]5
+*.[hH][dD][fF]5
+*.[hH][dD][fF]
+*.[nN][cC]
+*.[zZ][aA][rR][rR]/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
