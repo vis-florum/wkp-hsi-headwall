@@ -45,6 +45,22 @@ documentation. Stored intensities are displayed without claiming reflectance uni
 See [the HELIOS EIFF notes](docs/use_cases/helios_eiff.md) for the byte layout,
 conversion, validation, and limitations.
 
+## Export the decoded cube
+
+Export to **ENVI Standard** (binary raster + `.hdr`) and/or **NRRD**, without
+opening the viewer:
+
+```bash
+uv run hsi-helios-eiff-export data/helios_eiff/your_scan.eiff \
+  --envi outputs/scan.bip --nrrd outputs/scan.nrrd
+```
+
+ENVI defaults to BIP; `--interleave bil` or `--interleave bsq` selects another
+layout. NRRD defaults to gzip; `--nrrd-encoding raw` disables compression.
+Stored intensities and dtype are preserved. Exported wavelengths carry the
+inferred-scale note; `--omit-wavelengths` leaves them out. Existing exports
+require `--overwrite`. See [format choices, Python API, and axis conventions](docs/export.md).
+
 ## Layout
 
 ```text
